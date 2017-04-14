@@ -1,11 +1,10 @@
   This function does the following:
-  1. Get all the groups that have admin access added as a policy and add those groups to a global array
-  2. Loop through all the users in the default aws account(via saml tool hopefully)
 
-  a. If the user has the admin policy attached to their user, add them to the admin array.
+  1. It loops through all the groups and adds all the groups that have admin access as a policy to a global group array.
 
-  b. If the user is a part of one of the admin groups determined above then add them to the admin array.
-  3. Print out the global admin user array.
+  2. It loops through all the users and adds all the users that have the admin policy attached to their user or the user is a part of one of the admin groups determined above to a global admin array.
+
+  3. Print out the global admin array.
 
 ****  This will not catch a user that creates a custom policy that included all the statements included in the Admin policy.
 
